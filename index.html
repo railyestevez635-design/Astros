@@ -1,177 +1,417 @@
-<!DOCTYPE html><html lang="es">
+<!DOCTYPE html>
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ASTROS</title>
-  <style>
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #080b16;
-      color: white;
-    }
-    header {
-      padding: 35px 20px;
-      text-align: center;
-      background: linear-gradient(135deg, #111936, #090b13);
-      border-bottom: 1px solid #29304d;
-    }
-    h1 {
-      margin: 0;
-      font-size: 48px;
-      letter-spacing: 6px;
-    }
-    header p {
-      color: #aeb7d8;
-      margin: 10px 0 0;
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      flex-wrap: wrap;
-      padding: 18px;
-      background: #0d1121;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      padding: 10px 16px;
-      border: 1px solid #303957;
-      border-radius: 10px;
-    }
-    nav a:hover {
-      background: #202844;
-    }
-    main {
-      max-width: 1000px;
-      margin: auto;
-      padding: 35px 20px;
-    }
-    section {
-      margin-bottom: 35px;
-    }
-    h2 {
-      font-size: 28px;
-      margin-bottom: 12px;
-    }
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 15px;
-    }
-    .card {
-      background: #11162a;
-      border: 1px solid #29304d;
-      border-radius: 15px;
-      padding: 22px;
-    }
-    .card h3 {
-      margin-top: 0;
-    }
-    .button {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 12px 18px;
-      border-radius: 10px;
-      background: #ffffff;
-      color: #080b16;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    footer {
-      text-align: center;
-      padding: 30px;
-      color: #8992b3;
-      border-top: 1px solid #29304d;
-    }
-  </style>
-</head><body>
-  <header>
-    <h1>ASTROS</h1>
-    <p>Comunidad gaming · Jugadores · Guerras · Competición</p>
-  </header>  <nav>
-    <a href="#inicio">Inicio</a>
-    <a href="#jugadores">Jugadores</a>
-    <a href="#lideres">Líderes</a>
-    <a href="#guerras">Guerras</a>
-    <a href="#pruebas">Pruebas</a>
-  </nav>  <main>
-    <section id="inicio">
-      <h2>Bienvenido a ASTROS 🚀</h2>
-      <p>Este es el centro oficial de la comunidad ASTROS.</p>
-    </section><section id="jugadores">
-  <h2>Jugadores</h2>
-  <div class="cards">
-    <div class="card">
-      <h3>Jugadores ASTROS</h3>
-      <p>Aquí aparecerán los jugadores registrados.</p>
-    </div><div class="player-card">
-  <h3>Bamalu777</h3>
-  <p>Jugador de ASTROS</p>
-</div>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASTROS</title>
 
-<div class="player-card">
-  <h3>gajo 1002</h3>
-  <p>Jugador de ASTROS</p>
-</div>
+<style>
+*{box-sizing:border-box}
 
-<div class="player-card">
-  <h3>thisissamuel09</h3>
-  <p>Jugador de ASTROS</p>
-</div>
-    <div class="player-card">
-  <h3>Bamalu777</h3>
-  <p>Jugador de ASTROS</p>
-</div>
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:#071a3d;
+  color:white;
+}
 
-<div class="player-card">
-  <h3>gajo 1002</h3>
-  <p>Jugador de ASTROS</p>
-</div>
+header{
+  text-align:center;
+  padding:55px 20px;
+  background:linear-gradient(180deg,#1261d6,#073477);
+}
 
-<div class="player-card">
-  <h3>thisissamuel09</h3>
-  <p>Jugador de ASTROS</p>
-</div>
+header h1{
+  margin:0;
+  font-size:60px;
+  letter-spacing:10px;
+}
+
+header p{
+  margin-top:12px;
+  color:#d9e8ff;
+}
+
+nav{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:10px;
+  padding:18px;
+  background:#06152f;
+  position:sticky;
+  top:0;
+  z-index:10;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  padding:12px 16px;
+  border-radius:10px;
+  background:#0d2d63;
+  border:1px solid #2864b7;
+}
+
+nav a:hover{
+  background:#174b94;
+}
+
+main{
+  max-width:1000px;
+  margin:auto;
+  padding:35px 20px;
+}
+
+section{
+  margin-bottom:45px;
+  scroll-margin-top:90px;
+}
+
+h2{
+  font-size:30px;
+  border-left:5px solid #3d91ff;
+  padding-left:12px;
+}
+
+.card{
+  background:#0b2550;
+  border:1px solid #24599c;
+  border-radius:16px;
+  padding:22px;
+  margin-bottom:15px;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+  gap:15px;
+}
+
+input,textarea{
+  width:100%;
+  padding:13px;
+  margin:7px 0;
+  border-radius:9px;
+  border:1px solid #3974bb;
+  background:#061735;
+  color:white;
+}
+
+button,.button{
+  display:inline-block;
+  border:0;
+  padding:12px 18px;
+  margin-top:10px;
+  border-radius:10px;
+  background:#3185ff;
+  color:white;
+  font-weight:bold;
+  text-decoration:none;
+  cursor:pointer;
+}
+
+button:hover,.button:hover{
+  background:#56a0ff;
+}
+
+.player-card,.leader-card{
+  background:#102f60;
+  border:1px solid #2d6db5;
+  padding:18px;
+  border-radius:14px;
+}
+
+.hidden{
+  display:none;
+}
+
+.message{
+  margin-top:12px;
+  padding:12px;
+  border-radius:9px;
+  background:#071a3d;
+}
+
+footer{
+  text-align:center;
+  padding:30px;
+  background:#06152f;
+  color:#9eb8df;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>ASTROS</h1>
+  <p>COMUNIDAD GAMING · COMPETICIÓN · GUERRAS · PRUEBAS</p>
+</header>
+
+<nav>
+  <a href="#inicio">Inicio</a>
+  <a href="#inscribirse">Inscribirse</a>
+  <a href="#pruebas">Pruebas</a>
+  <a href="#guerras">Guerras</a>
+  <a href="#jugadores">Jugadores</a>
+  <a href="#creador">Creador</a>
+  <a href="#semilider">Semilíder</a>
+</nav>
+
+<main>
+
+<section id="inicio">
+  <h2>Bienvenido a ASTROS 🚀</h2>
+  <div class="card">
+    <p>Bienvenido a la web oficial de ASTROS.</p>
+    <p>Una familia de jugadores competitivos.</p>
   </div>
 </section>
 
-<section id="lideres">
-  <h2>Líderes</h2>
-  <div class="cards">
-    <div class="card">
-      <h3>Equipo de liderazgo</h3>
-      <p>Aquí aparecerán los líderes de ASTROS.</p>
-    </div>
-    <div class="leader-card">
-  <h3>F4ZE_MEL3NAS</h3>
-  <p>Líder de ASTROS</p>
-    </div>
-  </div>
-</section>
+<section id="inscribirse">
+  <h2>Inscribirse 📝</h2>
 
-<section id="guerras">
-  <h2>Guerras ⚔️</h2>
-  <div class="cards">
-    <div class="card">
-      <h3>Próximamente</h3>
-      <p>Aquí podremos mostrar guerras, resultados y estadísticas.</p>
-    </div>
+  <div class="card">
+    <p>¿Quieres formar parte de ASTROS? Completa tus datos.</p>
+
+    <input id="usuario" placeholder="Usuario">
+    <input id="nivel" placeholder="Nivel">
+    <input id="anos" placeholder="Años jugando">
+
+    <button onclick="inscribirse()">Enviar inscripción</button>
+
+    <div id="inscripcionMensaje" class="message hidden"></div>
   </div>
 </section>
 
 <section id="pruebas">
-  <h2>Pruebas e inscripciones</h2>
+  <h2>Pruebas 🧪</h2>
+
   <div class="card">
-    <p>¿Quieres formar parte de ASTROS?</p>
-    <a class="button" href="https://discord.gg/G4xbSuBEf">Entrar al Discord</a>
+    <h3>¿Quieres hacer las pruebas?</h3>
+    <p>Entra al Discord de ASTROS y habla con un moderador o con el equipo.</p>
+
+    <a class="button" href="https://discord.gg/G4xbSuBEf" target="_blank">
+      ENTRAR AL DISCORD
+    </a>
   </div>
 </section>
 
-  </main>  <footer>
-    ASTROS · Creado por F4ZE_MEL3NAS
-  </footer>
+<section id="guerras">
+  <h2>Guerras de clanes ⚔️</h2>
+
+  <div class="card">
+    <h3 id="guerraTitulo">Próximamente</h3>
+    <p id="guerraTexto">
+      Aquí aparecerán las guerras de clanes, resultados y próximas partidas.
+    </p>
+  </div>
+</section>
+
+<section id="jugadores">
+  <h2>Jugadores ASTROS 🎮</h2>
+
+  <div id="listaJugadores" class="cards">
+
+    <div class="player-card">
+      <h3>Bamalu777</h3>
+      <p>Jugador de ASTROS</p>
+    </div>
+
+    <div class="player-card">
+      <h3>gajo 1002</h3>
+      <p>Jugador de ASTROS</p>
+    </div>
+
+    <div class="player-card">
+      <h3>thisissamuel09</h3>
+      <p>Jugador de ASTROS</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="creador">
+  <h2>Panel del Creador 👑</h2>
+
+  <div class="card">
+
+    <div id="loginCreador">
+      <p>Introduce la contraseña del creador.</p>
+
+      <input type="password" id="passCreador" placeholder="Contraseña">
+
+      <button onclick="entrarCreador()">Entrar</button>
+
+      <p id="errorCreador"></p>
+    </div>
+
+    <div id="panelCreador" class="hidden">
+
+      <h3>Panel de comandos</h3>
+
+      <p>Editar guerra de clanes:</p>
+
+      <input id="nuevoTitulo" placeholder="Título de la guerra">
+
+      <textarea id="nuevoTexto" placeholder="Información de la guerra"></textarea>
+
+      <button onclick="guardarGuerra()">Guardar guerra</button>
+
+      <hr>
+
+      <h3>Añadir jugador</h3>
+
+      <input id="nuevoJugador" placeholder="Nombre del jugador">
+
+      <button onclick="anadirJugador()">Añadir jugador</button>
+
+      <hr>
+
+      <h3>Mensaje de ASTROS</h3>
+
+      <textarea id="mensajeAstros" placeholder="Escribe un mensaje para la web"></textarea>
+
+      <button onclick="guardarMensaje()">Guardar mensaje</button>
+
+      <p id="mensajeGuardado"></p>
+
+    </div>
+  </div>
+</section>
+
+<section id="semilider">
+  <h2>Panel del Semilíder ⭐</h2>
+
+  <div class="card">
+
+    <div id="loginSemi">
+      <p>Introduce la contraseña del semilíder.</p>
+
+      <input type="password" id="passSemi" placeholder="Contraseña">
+
+      <button onclick="entrarSemi()">Entrar</button>
+
+      <p id="errorSemi"></p>
+    </div>
+
+    <div id="panelSemi" class="hidden">
+
+      <h3>Herramientas del Semilíder</h3>
+
+      <p>Puede consultar y gestionar tareas menores de ASTROS.</p>
+
+      <button onclick="verJugadores()">Ver jugadores</button>
+
+      <p id="semiMensaje"></p>
+
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<footer>
+  ASTROS · Creado por F4ZE_MEL3NAS
+</footer>
+
+<script>
+
+function inscribirse(){
+
+  const usuario=document.getElementById("usuario").value;
+  const nivel=document.getElementById("nivel").value;
+  const anos=document.getElementById("anos").value;
+
+  const mensaje=document.getElementById("inscripcionMensaje");
+
+  if(!usuario || !nivel || !anos){
+    mensaje.classList.remove("hidden");
+    mensaje.innerText="Completa todos los campos.";
+    return;
+  }
+
+  mensaje.classList.remove("hidden");
+  mensaje.innerText=
+    "¡Inscripción preparada! Usuario: "+usuario+
+    " · Nivel: "+nivel+
+    " · Años jugando: "+anos+
+    ". Ahora entra al Discord para continuar.";
+}
+
+function entrarCreador(){
+
+  const pass=document.getElementById("passCreador").value;
+
+  if(pass==="piecerey"){
+    document.getElementById("loginCreador").classList.add("hidden");
+    document.getElementById("panelCreador").classList.remove("hidden");
+  }else{
+    document.getElementById("errorCreador").innerText="Contraseña incorrecta.";
+  }
+}
+
+function entrarSemi(){
+
+  const pass=document.getElementById("passSemi").value;
+
+  if(pass==="escoba777"){
+    document.getElementById("loginSemi").classList.add("hidden");
+    document.getElementById("panelSemi").classList.remove("hidden");
+  }else{
+    document.getElementById("errorSemi").innerText="Contraseña incorrecta.";
+  }
+}
+
+function guardarGuerra(){
+
+  const titulo=document.getElementById("nuevoTitulo").value;
+  const texto=document.getElementById("nuevoTexto").value;
+
+  if(titulo){
+    document.getElementById("guerraTitulo").innerText=titulo;
+  }
+
+  if(texto){
+    document.getElementById("guerraTexto").innerText=texto;
+  }
+}
+
+function anadirJugador(){
+
+  const nombre=document.getElementById("nuevoJugador").value;
+
+  if(!nombre)return;
+
+  const tarjeta=document.createElement("div");
+  tarjeta.className="player-card";
+
+  tarjeta.innerHTML=
+    "<h3>"+nombre+"</h3>"+
+    "<p>Jugador de ASTROS</p>";
+
+  document.getElementById("listaJugadores").appendChild(tarjeta);
+
+  document.getElementById("nuevoJugador").value="";
+}
+
+function guardarMensaje(){
+
+  const mensaje=document.getElementById("mensajeAstros").value;
+
+  document.getElementById("mensajeGuardado").innerText=
+    "Mensaje guardado en esta sesión: "+mensaje;
+}
+
+function verJugadores(){
+
+  document.getElementById("semiMensaje").innerText=
+    "Jugadores actuales: Bamalu777, gajo 1002 y thisissamuel09.";
+}
+
+</script>
+
 </body>
-  </html>
+</html>
